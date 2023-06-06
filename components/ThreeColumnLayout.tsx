@@ -9,13 +9,18 @@ export const ThreeColumnLayout = () => {
         <LeftColumn>
           <LeftColumnInner>
             <PositionAbsolute>
-              <CoverBackgroundImage />
-              {/* <TestImage /> */}
+              <CoverBackgroundImage image="/sub01@2x.jpg" />
             </PositionAbsolute>
           </LeftColumnInner>
         </LeftColumn>
         <MiddleColumn />
-        <RightColumn></RightColumn>
+        <RightColumn>
+          <LeftColumnInner>
+            <PositionAbsolute>
+              <CoverBackgroundImage image="/sub02@2x.jpg" />
+            </PositionAbsolute>
+          </LeftColumnInner>
+        </RightColumn>
       </ThreeColumnLayoutContainer>
     </Root>
   );
@@ -73,12 +78,6 @@ const PositionAbsolute = styled.div`
   left: 0;
 `;
 
-const TestImage = styled.div`
-  width: 100px;
-  height: 100px;
-  background-image: url('/sub01@2x.jpg');
-`;
-
 const MiddleColumn = styled.div`
   width: 12.84047%;
   height: auto;
@@ -90,5 +89,4 @@ const RightColumn = styled.div`
   overflow: hidden;
   z-index: 0;
   position: relative;
-  background-color: red;
 `;
