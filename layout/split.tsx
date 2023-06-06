@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
+import { ThreeColumnLayout } from '../components/ThreeColumnLayout';
 
 const SplitContainer = styled.div`
   display: table;
