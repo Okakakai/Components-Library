@@ -57,24 +57,14 @@ const FlexSplitRight = styled.div`
 
 const Split = () => {
   return (
-    <>
-      {/* <SplitContainer>
-        <SplitItem>
-          <SplitLeftInner>left</SplitLeftInner>
-        </SplitItem>
-        <SplitItem>
-          <SplitRightInner>right</SplitRightInner>
-        </SplitItem>
-      </SplitContainer> */}
-      <FlexSplitContainer>
-        <FlexSplitRight>
-          <TwoHandredVh />
-        </FlexSplitRight>
-        <FlexSplitLeft>
-          <StickContainer />
-        </FlexSplitLeft>
-      </FlexSplitContainer>
-    </>
+    <FlexSplitContainer>
+      <FlexSplitRight>
+        <TwoHandredVh />
+      </FlexSplitRight>
+      <FlexSplitLeft>
+        <StickContainer />
+      </FlexSplitLeft>
+    </FlexSplitContainer>
   );
 };
 

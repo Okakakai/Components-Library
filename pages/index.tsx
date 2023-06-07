@@ -11,6 +11,9 @@ const Home: NextPage = () => {
         <Link href={'/components/layouts/ColumnLayout'}>
           <LayoutNavigation>ThreeColumnLayout</LayoutNavigation>
         </Link>
+        <Link href={'/components/layouts/SplitLayout'}>
+          <LayoutNavigation>SplitLayout</LayoutNavigation>
+        </Link>
       </Layouts>
       <Layouts>
         <Title>Border</Title>
