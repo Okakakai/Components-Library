@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import ColumnLayout from '../ColumnLayout';
+import ColumnLayout from '../layouts/ColumnLayout';
 import { StyledBorderBox } from '../../../components/border/BorderBox';
 
 const Container1 = styled.div`

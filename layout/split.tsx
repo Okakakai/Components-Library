@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
-import { ThreeColumnLayout } from '../components/ThreeColumnLayout';
+import SplitLayoutRightImage from '../components/styledImage/SplitLayoutRightImage';
 
 const SplitContainer = styled.div`
   display: table;
@@ -29,56 +29,55 @@ const SplitRightInner = styled.div`
   height: 200vh;
 `;
 
+const Split = () => {
+  return (
+    <FlexSplitContainer>
+      <FlexSplitRight>
+        <SplitLayoutRightImage />
+        <SplitLayoutRightImage />
+        <SplitLayoutRightImage />
+      </FlexSplitRight>
+      <FlexSplitLeft>
+        <StickContainer />
+      </FlexSplitLeft>
+    </FlexSplitContainer>
+  );
+};
+
+export default Split;
+
 const FlexSplitContainer = styled.div`
-  flex-direction: row-reverse;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
+  ${ChakraBreakPoint.mq.lg} {
+    flex-direction: row-reverse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+  }
+`;
+
+const FlexSplitRight = styled.div`
   width: 100%;
+  ${ChakraBreakPoint.mq.lg} {
+    width: 63.82812%;
+  }
 `;
 
 const FlexSplitLeft = styled.div`
-  padding: 0 9.6875% 0 6.09375%;
-  /* ${ChakraBreakPoint.mq.lg} {
+  width: 100%;
+  padding: 5rem 7.69231% 5rem;
+  ${ChakraBreakPoint.mq.lg} {
     width: 36.17188%;
-  } */
+    padding: 0 9.6875% 0 6.09375%;
+  }
 `;
 
 const TwoHandredVh = styled.div`
   height: 200vh;
   background: blue;
 `;
-
-const FlexSplitRight = styled.div`
-  width: 63.82812%;
-`;
-
-const Split = () => {
-  return (
-    <>
-      {/* <SplitContainer>
-        <SplitItem>
-          <SplitLeftInner>left</SplitLeftInner>
-        </SplitItem>
-        <SplitItem>
-          <SplitRightInner>right</SplitRightInner>
-        </SplitItem>
-      </SplitContainer> */}
-      <FlexSplitContainer>
-        <FlexSplitRight>
-          <TwoHandredVh />
-        </FlexSplitRight>
-        <FlexSplitLeft>
-          <StickContainer />
-        </FlexSplitLeft>
-      </FlexSplitContainer>
-    </>
-  );
-};
-
-export default Split;
 
 const StickyContent = styled.div`
   position: sticky;
