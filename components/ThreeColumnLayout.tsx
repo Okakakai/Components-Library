@@ -7,16 +7,7 @@ export const ThreeColumnLayout = () => {
     <Root>
       <ThreeColumnLayoutContainer>
         <Left />
-        <MiddleColumn>
-          {/* <MiddleColumnInner>
-            <MiddleTextLogoWrapper>
-              <Text>Beyond</Text>
-            </MiddleTextLogoWrapper>
-          </MiddleColumnInner> */}
-          <MiddleTextLogoWrapper>
-            <Text>Beyond</Text>
-          </MiddleTextLogoWrapper>
-        </MiddleColumn>
+        <Middle />
         <Right />
       </ThreeColumnLayoutContainer>
     </Root>
@@ -25,9 +16,9 @@ export const ThreeColumnLayout = () => {
 
 const Root = styled.div`
   width: 100%;
-  ${ChakraBreakPoint.mq.lg} {
+  /* ${ChakraBreakPoint.mq.lg} {
     margin: 18.75rem 0 0;
-  }
+  } */
   height: 100%;
 `;
 
@@ -121,6 +112,16 @@ const RightColumn = styled.div`
   background-color: #e7e9eb;
 `;
 
+const Middle = () => {
+  return (
+    <MiddleColumn>
+      <MiddleTextLogoWrapper>
+        <Text>Beyond</Text>
+      </MiddleTextLogoWrapper>
+    </MiddleColumn>
+  );
+};
+
 const MiddleColumn = styled.div`
   ${ChakraBreakPoint.mq.lg} {
     width: 12.84047%;
@@ -135,6 +136,36 @@ const MiddleColumn = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
+
+  position: relative;
+
+  ::before {
+    content: '';
+    margin: auto;
+    left: -100%;
+    right: -100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    border-top: 1px solid #000;
+  }
+  ::after {
+    content: '';
+    margin: auto;
+    left: -100%;
+    right: -100%;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #000;
+  }
+
+  ${ChakraBreakPoint.mq.lg} {
+    ::before,
+    ::after {
+      display: none;
+    }
+  }
 `;
 
 const MiddleColumnInner = styled.div`

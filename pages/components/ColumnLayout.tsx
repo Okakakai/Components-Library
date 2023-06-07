@@ -10,8 +10,6 @@ const ColumnLayout = () => {
   );
 };
 
-export default ColumnLayout;
-
 const Container = styled.div`
   width: 100%;
   height: 200vh;
@@ -19,3 +17,5 @@ const Container = styled.div`
     height: 50vh;
   }
 `;
+
+export default ColumnLayout;
