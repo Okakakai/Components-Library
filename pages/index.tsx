@@ -12,6 +12,12 @@ const Home: NextPage = () => {
           <LayoutNavigation>ThreeColumnLayout</LayoutNavigation>
         </Link>
       </Layouts>
+      <Layouts>
+        <Title>Border</Title>
+        <Link href={'/components/border/BorderBox'}>
+          <LayoutNavigation>BorderBox</LayoutNavigation>
+        </Link>
+      </Layouts>
     </Container>
   );
 };
