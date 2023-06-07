@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { CoverBackgroundImage } from './BackgrandImage';
+import { CoverBackgroundImage } from './styledImage/BackgrandImage';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
 
 export const ThreeColumnLayout = () => {

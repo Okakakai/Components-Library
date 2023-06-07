@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
-import { ThreeColumnLayout } from '../components/ThreeColumnLayout';
+import SplitLayoutRightImage from '../components/styledImage/SplitLayoutRightImage';
 
 const SplitContainer = styled.div`
   display: table;
@@ -29,37 +29,13 @@ const SplitRightInner = styled.div`
   height: 200vh;
 `;
 
-const FlexSplitContainer = styled.div`
-  flex-direction: row-reverse;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
-  width: 100%;
-`;
-
-const FlexSplitLeft = styled.div`
-  padding: 0 9.6875% 0 6.09375%;
-  /* ${ChakraBreakPoint.mq.lg} {
-    width: 36.17188%;
-  } */
-`;
-
-const TwoHandredVh = styled.div`
-  height: 200vh;
-  background: blue;
-`;
-
-const FlexSplitRight = styled.div`
-  width: 63.82812%;
-`;
-
 const Split = () => {
   return (
     <FlexSplitContainer>
       <FlexSplitRight>
-        <TwoHandredVh />
+        <SplitLayoutRightImage />
+        <SplitLayoutRightImage />
+        <SplitLayoutRightImage />
       </FlexSplitRight>
       <FlexSplitLeft>
         <StickContainer />
@@ -69,6 +45,39 @@ const Split = () => {
 };
 
 export default Split;
+
+const FlexSplitContainer = styled.div`
+  ${ChakraBreakPoint.mq.lg} {
+    flex-direction: row-reverse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    width: 100%;
+  }
+`;
+
+const FlexSplitRight = styled.div`
+  width: 100%;
+  ${ChakraBreakPoint.mq.lg} {
+    width: 63.82812%;
+  }
+`;
+
+const FlexSplitLeft = styled.div`
+  width: 100%;
+  padding: 5rem 7.69231% 5rem;
+  ${ChakraBreakPoint.mq.lg} {
+    width: 36.17188%;
+    padding: 0 9.6875% 0 6.09375%;
+  }
+`;
+
+const TwoHandredVh = styled.div`
+  height: 200vh;
+  background: blue;
+`;
 
 const StickyContent = styled.div`
   position: sticky;
