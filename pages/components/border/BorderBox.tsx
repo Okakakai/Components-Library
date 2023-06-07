@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { StyledBorderBox } from '../../../components/border/BorderBox';
 import ColumnLayout from '../ColumnLayout';
+import { StyledBorderBox } from '../../../components/border/BorderBox';
 
 const Container1 = styled.div`
   margin-top: 5rem;

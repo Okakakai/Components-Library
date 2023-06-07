@@ -16,7 +16,7 @@ const FlexBoxStyles = styled.div`
   content: '';
   border-top: 1px solid;
   width: 100%;
-  display: ${ChakraBreakPoint.mq.lg} {
+  ${ChakraBreakPoint.mq.lg} {
     display: flex;
     height: 100px;
     border-top: 1px solid #000;
