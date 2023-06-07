@@ -25,9 +25,9 @@ export const ThreeColumnLayout = () => {
 
 const Root = styled.div`
   width: 100%;
-  ${ChakraBreakPoint.mq.lg} {
+  /* ${ChakraBreakPoint.mq.lg} {
     margin: 18.75rem 0 0;
-  }
+  } */
   height: 100%;
 `;
 

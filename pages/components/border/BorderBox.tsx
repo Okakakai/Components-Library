@@ -1,19 +1,18 @@
 import styled from '@emotion/styled';
-import { ChakraBreakPoint } from '../../../utils/mediaQueryUtils';
 import { StyledBorderBox } from '../../../components/border/BorderBox';
+import ColumnLayout from '../ColumnLayout';
 
 const Container1 = styled.div`
+  margin-top: 5rem;
   width: 100%;
-  height: 200vh;
-  ${ChakraBreakPoint.mq.lg} {
-    height: 50vh;
-  }
+  height: 100%;
 `;
 
 const BorderBox = () => {
   return (
     <Container1>
-      <StyledBorderBox></StyledBorderBox>
+      <StyledBorderBox />
+      <ColumnLayout />
     </Container1>
   );
 };
