@@ -27,7 +27,6 @@ export const CoverBackgroundImage = styled.div<CoverBackgroundImageProps>`
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: 50% 50% !important;
-  opacity: 1;
   transform: scale(1.2);
   animation: ${opacityScaleAnimation} 4s infinite;
   transition: animation 0.8s, transform 1.4s;

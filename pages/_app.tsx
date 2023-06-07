@@ -9,8 +9,18 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Global
         styles={css`
           ${emotionReset}
-          li {
-            list-style: none;
+          *,
+          ::before,
+          ::after,
+          :before,
+          :after {
+            font-family: inherit;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 0;
+          }
+          div {
+            display: block;
           }
         `}
       />
