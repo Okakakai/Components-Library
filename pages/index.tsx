@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <Container>
       <Layouts>
         <Title>Layouts</Title>
-        <Link href={'/components/ColumnLayout'}>
+        <Link href={'/components/layouts/ColumnLayout'}>
           <LayoutNavigation>ThreeColumnLayout</LayoutNavigation>
         </Link>
       </Layouts>

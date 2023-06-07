@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { ThreeColumnLayout } from '../../components/ThreeColumnLayout';
-import { ChakraBreakPoint } from '../../utils/mediaQueryUtils';
+import { ThreeColumnLayout } from '../../../components/ThreeColumnLayout';
+import { ChakraBreakPoint } from '../../../utils/mediaQueryUtils';
 
 const ColumnLayout = () => {
   return (
