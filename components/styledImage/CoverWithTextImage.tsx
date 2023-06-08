@@ -112,7 +112,9 @@ const Box = styled.div`
 const CoverTextWrapper = styled.div`
   width: 100%;
   height: 100%;
-  margin: -8rem 0 5rem;
+  ${ChakraBreakPoint.mq.lg} {
+    margin: -8rem 0 5rem;
+  }
   background-color: #fff;
 `;
 
