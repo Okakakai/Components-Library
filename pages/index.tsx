@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </Layouts>
       <Layouts>
         <Title>Images</Title>
-        <Link href={'/components/border/CoverWithTextImage'}>
+        <Link href={'/components/images/CoverWithTextImage'}>
           <LayoutNavigation>CoverWithTextImage</LayoutNavigation>
         </Link>
       </Layouts>

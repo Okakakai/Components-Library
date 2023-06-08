@@ -3,6 +3,7 @@ import { CoverWithTextImage } from '../../../components/styledImage/CoverWithTex
 
 const Container1 = styled.div`
   margin-top: 5rem;
+  margin-bottom: 5rem;
   width: 100%;
   height: 100%;
 `;
