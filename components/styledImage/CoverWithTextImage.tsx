@@ -8,21 +8,37 @@ export const CoverWithTextImage = () => {
   return (
     <Root>
       <BorderBox>
-        <ImageWrapper>
-          <Image className={ImageStyle} src={path} alt={'cover'} fill />
-        </ImageWrapper>
-        <Box>
-          <CoverTextWrapper>
-            <StyledTextBox>
-              <Header>Beyond</Header>
-              <div>
-                aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaa
-              </div>
-            </StyledTextBox>
-          </CoverTextWrapper>
-        </Box>
+        <Top image={path} />
+        <Bottom />
       </BorderBox>
     </Root>
+  );
+};
+
+type Top = {
+  image: string;
+};
+
+const Top = ({ image }: Top) => {
+  return (
+    <ImageWrapper>
+      <Image className={ImageStyle} src={image} alt={'cover'} fill />
+    </ImageWrapper>
+  );
+};
+
+const Bottom = () => {
+  return (
+    <Box>
+      <CoverTextWrapper>
+        <StyledTextBox>
+          <Header>Beyond</Header>
+          <div>
+            aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaa
+          </div>
+        </StyledTextBox>
+      </CoverTextWrapper>
+    </Box>
   );
 };
 
