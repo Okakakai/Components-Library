@@ -15,43 +15,27 @@ export const CoverWithTextImage = () => {
   );
 };
 
-type Top = {
-  image: string;
-};
-
-const Top = ({ image }: Top) => {
-  return (
-    <ImageWrapper>
-      <Image className={ImageStyle} src={image} alt={'cover'} fill />
-    </ImageWrapper>
-  );
-};
-
-const Bottom = () => {
-  return (
-    <Box>
-      <CoverTextWrapper>
-        <StyledTextBox>
-          <Header>Beyond</Header>
-          <div>
-            aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaa
-          </div>
-        </StyledTextBox>
-      </CoverTextWrapper>
-    </Box>
-  );
-};
-
 const Root = styled.div`
   width: 100%;
   position: relative;
 `;
 
 const BorderBox = styled.div`
-  width: 80%;
-  margin: 0 auto 0 auto;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  ${ChakraBreakPoint.mq.lg} {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  width: 100%;
+
+  ${ChakraBreakPoint.mq.lg} {
+    ::before,
+    ::after {
+      left: -100%;
+      right: -100%;
+    }
+  }
 
   ::before {
     content: '';
@@ -81,9 +65,20 @@ const BorderBox = styled.div`
   } */
 `;
 
-const Box = styled.div`
+type Top = {
+  image: string;
+};
+
+const Top = ({ image }: Top) => {
+  return (
+    <ImageWrapper>
+      <Image className={ImageStyle} src={image} alt={'cover'} fill />
+    </ImageWrapper>
+  );
+};
+
+const ImageWrapper = styled.div`
   width: 100%;
-  padding: 5rem 7.69231% 5rem;
 `;
 
 const ImageStyle = css`
@@ -92,6 +87,26 @@ const ImageStyle = css`
   z-index: 0;
   width: 100% !important;
   opacity: 0.5;
+`;
+
+const Bottom = () => {
+  return (
+    <Box>
+      <CoverTextWrapper>
+        <StyledTextBox>
+          <Header>Beyond</Header>
+          <div>
+            aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaa
+          </div>
+        </StyledTextBox>
+      </CoverTextWrapper>
+    </Box>
+  );
+};
+
+const Box = styled.div`
+  width: 100%;
+  padding: 5rem 7.69231% 5rem;
 `;
 
 const CoverTextWrapper = styled.div`
@@ -121,8 +136,4 @@ const StyledTextBox = styled.div`
 
 const Header = styled.div`
   writing-mode: vertical-rl;
-`;
-
-const ImageWrapper = styled.div`
-  width: 100%;
 `;
