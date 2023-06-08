@@ -21,6 +21,12 @@ const Home: NextPage = () => {
           <LayoutNavigation>BorderBox</LayoutNavigation>
         </Link>
       </Layouts>
+      <Layouts>
+        <Title>Images</Title>
+        <Link href={'/components/border/CoverWithTextImage'}>
+          <LayoutNavigation>CoverWithTextImage</LayoutNavigation>
+        </Link>
+      </Layouts>
     </Container>
   );
 };
