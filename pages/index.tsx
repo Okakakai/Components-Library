@@ -20,6 +20,9 @@ const Home: NextPage = () => {
         <Link href={'/components/border/BorderBox'}>
           <LayoutNavigation>BorderBox</LayoutNavigation>
         </Link>
+        <Link href={'/components/border/SplitLayoutTopBorderBox'}>
+          <LayoutNavigation>SplitLayoutTopBorderBox</LayoutNavigation>
+        </Link>
       </Layouts>
       <Layouts>
         <Title>Images</Title>
