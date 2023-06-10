@@ -29,6 +29,9 @@ const Home: NextPage = () => {
         <Link href={'/components/images/CoverWithTextImage'}>
           <LayoutNavigation>CoverWithTextImage</LayoutNavigation>
         </Link>
+        <Link href={'/components/images/ImageWithText'}>
+          <LayoutNavigation>ImageWithText</LayoutNavigation>
+        </Link>
       </Layouts>
     </Container>
   );
