@@ -2,33 +2,6 @@ import styled from '@emotion/styled';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
 import SplitLayoutRightImage from '../components/styledImage/SplitLayoutRightImage';
 
-const SplitContainer = styled.div`
-  display: table;
-  width: 100%;
-`;
-
-const SplitItem = styled.div`
-  display: table-cell;
-  padding: 80px;
-  width: 50%;
-`;
-
-const SplitLeft = styled.div`
-  background: #000;
-  color: #fff;
-  position: relative;
-`;
-
-const SplitLeftInner = styled.div`
-  height: 100%;
-  position: fixed;
-  width: 50%;
-`;
-
-const SplitRightInner = styled.div`
-  height: 200vh;
-`;
-
 const Split = () => {
   return (
     <FlexSplitContainer>
@@ -47,6 +20,7 @@ const Split = () => {
 export default Split;
 
 const FlexSplitContainer = styled.div`
+  /* box-sizing: content-box; */
   ${ChakraBreakPoint.mq.lg} {
     flex-direction: row-reverse;
     display: flex;
@@ -59,24 +33,22 @@ const FlexSplitContainer = styled.div`
 `;
 
 const FlexSplitRight = styled.div`
+  /* box-sizing: inherit; */
   width: 100%;
   ${ChakraBreakPoint.mq.lg} {
     width: 63.82812%;
   }
+  border-right: 1px solid #000;
 `;
 
 const FlexSplitLeft = styled.div`
+  /* box-sizing: inherit; */
   width: 100%;
   padding: 5rem 7.69231% 5rem;
   ${ChakraBreakPoint.mq.lg} {
     width: 36.17188%;
     padding: 0 9.6875% 0 6.09375%;
   }
-`;
-
-const TwoHandredVh = styled.div`
-  height: 200vh;
-  background: blue;
 `;
 
 const StickyContent = styled.div`

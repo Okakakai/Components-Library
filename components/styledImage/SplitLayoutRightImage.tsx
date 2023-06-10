@@ -14,7 +14,16 @@ const ImageContainer = styled.div`
   overflow: hidden;
   z-index: 0;
   position: relative;
-
+  ::after {
+    content: '';
+    margin: auto;
+    left: -100%;
+    right: -100%;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #000;
+  }
   ::before {
     ${ChakraBreakPoint.mq.lg} {
       padding: 126.43819% 0 0;
