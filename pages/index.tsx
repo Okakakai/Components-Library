@@ -34,6 +34,12 @@ const Home: NextPage = () => {
         </Link>
       </Layouts>
       <Layouts>
+        <Title>slides</Title>
+        <Link href={'/slides/'}>
+          <LayoutNavigation>WireFrame</LayoutNavigation>
+        </Link>
+      </Layouts>
+      <Layouts>
         <Title>WireFrame</Title>
         <Link href={'/wireframe/'}>
           <LayoutNavigation>WireFrame</LayoutNavigation>
