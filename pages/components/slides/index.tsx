@@ -4,12 +4,12 @@ import { Slider1 } from '../../../components/slides/Slide';
 const Slides = () => {
   return (
     <Container>
-      <FlexBox>
-        <FlexItem>
+      <GridBox>
+        <GridItem>
           <Title>Slider1</Title>
           <Slider1 />
-        </FlexItem>
-      </FlexBox>
+        </GridItem>
+      </GridBox>
     </Container>
   );
 };
@@ -19,14 +19,13 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const FlexBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+const GridBox = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
-const FlexItem = styled.div`
-  width: fit-content;
-  height: fit-content;
+const GridItem = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 const Title = styled.div`

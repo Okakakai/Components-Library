@@ -34,9 +34,9 @@ const Home: NextPage = () => {
         </Link>
       </Layouts>
       <Layouts>
-        <Title>slides</Title>
-        <Link href={'/slides/'}>
-          <LayoutNavigation>WireFrame</LayoutNavigation>
+        <Title>Slides</Title>
+        <Link href={'/components/slides/'}>
+          <LayoutNavigation>Slide Gallary</LayoutNavigation>
         </Link>
       </Layouts>
       <Layouts>
