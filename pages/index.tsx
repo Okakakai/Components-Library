@@ -33,6 +33,12 @@ const Home: NextPage = () => {
           <LayoutNavigation>ImageWithText</LayoutNavigation>
         </Link>
       </Layouts>
+      <Layouts>
+        <Title>WireFrame</Title>
+        <Link href={'/wireframe/'}>
+          <LayoutNavigation>WireFrame</LayoutNavigation>
+        </Link>
+      </Layouts>
     </Container>
   );
 };
