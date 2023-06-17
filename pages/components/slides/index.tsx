@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Slider1 } from '../../../components/slides/Slide1';
 import Slider2 from '../../../components/slides/Slide2';
+import Slider3 from '../../../components/slides/Slide3';
 
 const Slides = () => {
   return (
@@ -13,6 +14,10 @@ const Slides = () => {
         <GridItem>
           <Title>Slider2</Title>
           <Slider2 />
+        </GridItem>
+        <GridItem>
+          <Title>Slider3</Title>
+          <Slider3 />
         </GridItem>
       </GridBox>
     </Container>
