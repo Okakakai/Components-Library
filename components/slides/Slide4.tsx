@@ -87,7 +87,7 @@ const HeroTitle = styled.div`
   width: 100%;
 `;
 
-const Slider3 = () => {
+const Slider4 = () => {
   return (
     <Wrapper>
       <Hero>
@@ -119,4 +119,4 @@ const Slider3 = () => {
   );
 };
 
-export default Slider3;
+export default Slider4;

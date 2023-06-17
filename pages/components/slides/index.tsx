@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { Slider1 } from '../../../components/slides/Slide1';
 import Slider2 from '../../../components/slides/Slide2';
 import Slider3 from '../../../components/slides/Slide3';
+import Slider4 from '../../../components/slides/Slide4';
+import Slider5 from '../../../components/slides/Slide5';
+import Slider6 from '../../../components/slides/Slide6';
+import Slider7 from '../../../components/slides/Slide7';
 
 const Slides = () => {
   return (
@@ -18,6 +22,22 @@ const Slides = () => {
         <GridItem>
           <Title>Slider3</Title>
           <Slider3 />
+        </GridItem>
+        <GridItem>
+          <Title>Slider4</Title>
+          <Slider4 />
+        </GridItem>
+        <GridItem>
+          <Title>Slider5</Title>
+          <Slider5 />
+        </GridItem>
+        <GridItem>
+          <Title>Slider6</Title>
+          <Slider6 />
+        </GridItem>
+        <GridItem>
+          <Title>Slider7</Title>
+          <Slider7 />
         </GridItem>
       </GridBox>
     </Container>
