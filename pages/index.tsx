@@ -40,6 +40,12 @@ const Home: NextPage = () => {
         </Link>
       </Layouts>
       <Layouts>
+        <Title>ImageAnimation</Title>
+        <Link href={'/components/imageAnimation/curtain'}>
+          <LayoutNavigation>curtain</LayoutNavigation>
+        </Link>
+      </Layouts>
+      <Layouts>
         <Title>WireFrame</Title>
         <Link href={'/wireframe/'}>
           <LayoutNavigation>WireFrame</LayoutNavigation>

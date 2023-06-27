@@ -25,6 +25,10 @@ const Split = ({ direction }: Props) => {
 
 export default Split;
 
+const PositionRelative = styled.div`
+  position: relative;
+`;
+
 type FlexSplitContainerProps = {
   directionStyle: string;
 };
@@ -32,6 +36,7 @@ type FlexSplitContainerProps = {
 const FlexSplitContainer = styled.div<FlexSplitContainerProps>`
   /* box-sizing: content-box; */
   ${ChakraBreakPoint.mq.lg} {
+    scroll-snap-align: start;
     flex-direction: ${(props) => props.directionStyle};
     display: flex;
     flex-wrap: wrap;

@@ -41,16 +41,18 @@ const SliderContent = styled.div`
   max-width: 100%;
   min-width: 100%;
   animation: ${sliderAnime} 15s ease-in-out infinite;
+  position: relative;
 `;
 
 const Image = styled.img`
+  position: absolute;
   height: 100%;
   max-width: 100%;
   min-width: 100%;
   object-fit: cover;
 `;
 
-const Slider5 = () => {
+const Slider8 = () => {
   return (
     <SliderContainer>
       <SliderContent>
@@ -65,14 +67,8 @@ const Slider5 = () => {
           alt="slider_image2"
         />
       </SliderContent>
-      <SliderContent>
-        <Image
-          src="https://gorigoricode.com/wp-content/uploads/2022/04/husky06.jpg"
-          alt="slider_image3"
-        />
-      </SliderContent>
     </SliderContainer>
   );
 };
 
-export default Slider5;
+export default Slider8;
