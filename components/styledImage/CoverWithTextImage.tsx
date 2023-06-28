@@ -18,6 +18,7 @@ export const CoverWithTextImage = () => {
 const Root = styled.div`
   width: 100%;
   position: relative;
+  scroll-snap-align: start;
 `;
 
 const BorderBox = styled.div`

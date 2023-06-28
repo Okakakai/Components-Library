@@ -20,6 +20,7 @@ const Root = styled.div`
     margin: 18.75rem 0 0;
   } */
   height: 100%;
+  scroll-snap-align: start;
 `;
 
 const ThreeColumnLayoutContainer = styled.div`

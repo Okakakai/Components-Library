@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { ChakraBreakPoint } from '../utils/mediaQueryUtils';
 import SplitLayoutRightImage from '../components/styledImage/SplitLayoutRightImage';
+import { ParallaxBackgroudImageContainer } from '../components/styledImage/ParallaxBackgroudImageContainer';
 
 type directionType = 'left' | 'right';
 type Props = {
@@ -12,7 +13,7 @@ const Split = ({ direction }: Props) => {
   return (
     <FlexSplitContainer directionStyle={directionStyle}>
       <FlexSplitRight>
-        <SplitLayoutRightImage />
+        <ParallaxBackgroudImageContainer />
         <SplitLayoutRightImage />
         <SplitLayoutRightImage />
       </FlexSplitRight>
@@ -25,6 +26,10 @@ const Split = ({ direction }: Props) => {
 
 export default Split;
 
+const PositionRelative = styled.div`
+  position: relative;
+`;
+
 type FlexSplitContainerProps = {
   directionStyle: string;
 };
@@ -32,6 +37,7 @@ type FlexSplitContainerProps = {
 const FlexSplitContainer = styled.div<FlexSplitContainerProps>`
   /* box-sizing: content-box; */
   ${ChakraBreakPoint.mq.lg} {
+    scroll-snap-align: start;
     flex-direction: ${(props) => props.directionStyle};
     display: flex;
     flex-wrap: wrap;
